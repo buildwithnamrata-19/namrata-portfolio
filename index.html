@@ -6,11 +6,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Namrata Dolas | Hardware Designer</title>
+<title>Namrata Dolas | Hardware Design Engineer</title>
 
 <link rel="stylesheet" href="style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -25,9 +25,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 
 <nav>
 
-<a onclick="showPage('home')">Home</a>
-<a onclick="showPage('about')">About</a>
-<a onclick="showPage('work')">Work</a>
+<button type="button" class="nav-link active" data-page="home" onclick="showPage('home')">Home</button>
+<button type="button" class="nav-link" data-page="about" onclick="showPage('about')">About</button>
+<button type="button" class="nav-link" data-page="work" onclick="showPage('work')">Work</button>
 
 </nav>
 
@@ -48,17 +48,17 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 <h2>Hardware Design Engineer</h2>
 
 <p class="hero-desc">
-Electronics Engineering student specializing in PCB Design, Industrial Wiring Systems, Embedded Hardware and Power Analysis.
+Electronics and Telecommunication (E&TC) Engineering student specializing in PCB Design, Industrial Wiring Systems, Embedded Hardware and Power Analysis.
 </p>
 
 <a href="Tech_Document/Namrata_Dolas_HWDesign_2026.pdf" target="_blank" class="btn">
-Download Resume
+DownloadResume
 </a>
 
 </div>
 
 <div class="profile">
-<img src="images/pro.pic.jpeg">
+<img src="images/MyPic.jpeg" alt="Namrata Dolas profile photo">
 </div>
 
 </div>
@@ -81,7 +81,7 @@ Download Resume
 <h2>About Me</h2>
 
 <p>
-I am an Electronics Engineering student passionate about hardware design and industrial electronics.
+I am an Electronics and Telecommunication (E&TC) Engineering student passionate about hardware design and industrial electronics.
 My work focuses on PCB development, wiring architecture, subsystem power analysis, and embedded hardware integration.
 </p>
 
@@ -94,10 +94,9 @@ During my internship I worked on industrial system design including wiring diagr
 <div id="contactBox">
 
 <p><b>Namrata Dolas</b></p>
-<p><i class="fa-solid fa-phone"></i> 8956592019</p>
-<p><i class="fa-solid fa-envelope"></i> namudolas5455@gmail.com</p>
-<p><i class="fa-brands fa-linkedin"></i> linkedin.com</p>
-<p><i class="fa-brands fa-x-twitter"></i> x.com/namrata9111</p>
+<p><i class="fa-solid fa-envelope"></i> <a href="mailto:buildwithnamrata@gmail.com">buildwithnamrata@gmail.com</a></p>
+<p><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/namratadolas19/" target="_blank" rel="noopener noreferrer">linkedin.com/in/namratadolas19</a></p>
+<p><i class="fa-brands fa-x-twitter"></i> <a href="https://x.com/namrata9111" target="_blank" rel="noopener noreferrer">x.com/namrata9111</a></p>
 
 </div>
 
@@ -381,6 +380,8 @@ B.Tech Journey
 <h3>Reviews</h3>
 </div>
 
+</div>
+
 
 </section>
 
@@ -585,62 +586,6 @@ B.Tech Journey
 
 </section> 
 
-<section id="audioPCB" class="page">
-
-<button class="btn back-btn" onclick="showPage('pcb')">
-← Back
-</button>
-
-<h2 class="section-title">Audio Panel PCB</h2>
-
-<div class="pcb-overview">
-
-<div class="overview-card">
-<h4>Board Type</h4>
-<p>DI / DO Interface</p>
-</div>
-
-<div class="overview-card">
-<h4>Layers</h4>
-<p>2 Layer</p>
-</div>
-
-<div class="overview-card">
-<h4>Tool</h4>
-<p>KiCad</p>
-</div>
-
-<div class="overview-card">
-<h4>Application</h4>
-<p>Industrial Panel Interface</p>
-</div>
-
-</div>
-
-<h3 class="pcb-subtitle">Schematic Design</h3>
-
-<div class="pcb-gallery">
-
-<img src="images/audio_panel_schematic.png">
-
-<img src="images/audio_panel_schematic_a.png">
-
-</div>
-
-<h3 class="pcb-subtitle">Design Highlights</h3>
-
-<ul class="pcb-highlights">
-
-<li>Optocoupler based signal isolation</li>
-<li>Transistor driver stage for DO outputs</li>
-<li>Protection diode for inductive loads</li>
-<li>Structured signal naming for scalability</li>
-
-</ul>
-
-</section> 
-
-
 <!-- LVDS PROJECT PAGE -->
 
 <section id="lvdsProject" class="page">
@@ -770,27 +715,9 @@ This architecture ensures <b>electrical isolation between the controller and ext
 
 <ul>
 
-<li><b>Digital Input (DI) Stage</b></li>
-
-<ul>
-<li>Pull-up resistors (10k) maintain stable logic states</li>
-<li>Panel switches pull the signal to <b>GND for activation</b></li>
-</ul>
-
-<li><b>Isolation Stage</b></li>
-
-<ul>
-<li><b>PC817 optocoupler</b> isolates panel signals from controller logic</li>
-<li>Series resistor limits LED current for safe operation</li>
-</ul>
-
-<li><b>Digital Output (DO) Driver Stage</b></li>
-
-<ul>
-<li><b>BC547 NPN transistor</b> used as a low-side switching driver</li>
-<li>Base resistor controls transistor current</li>
-<li><b>Flyback diode (1N4007)</b> protects against inductive loads</li>
-</ul>
+<li><b>Digital Input (DI) Stage:</b> Pull-up resistors (10k) maintain stable logic states and panel switches pull the signal to <b>GND for activation</b>.</li>
+<li><b>Isolation Stage:</b> <b>PC817 optocoupler</b> isolates panel signals from controller logic and a series resistor limits LED current for safe operation.</li>
+<li><b>Digital Output (DO) Driver Stage:</b> <b>BC547 NPN transistor</b> is used as a low-side switching driver, base resistor controls transistor current and <b>flyback diode (1N4007)</b> protects against inductive loads.</li>
 
 </ul>
 
@@ -1295,7 +1222,7 @@ These reports include schematic documentation, PCB design documentation, wiring 
 <div class="docs-grid">
 
 <!-- AUDIO PANEL DOCUMENT -->
-<a onclick="openDoc('Tech_Document/Audio Panel Interface .pdf')" class="doc-card">
+<a href="#" onclick="openDoc('Tech_Document/Audio Panel Interface .pdf'); return false;" class="doc-card">
 
 <i class="fa-solid fa-file-pdf doc-icon"></i>
 
@@ -1306,7 +1233,7 @@ These reports include schematic documentation, PCB design documentation, wiring 
 
 
 <!-- DISTRIBUTION PANEL -->
-<a onclick="openDoc('Tech_Document/Distribution_Pnale.pdf')" class="doc-card">
+<a href="#" onclick="openDoc('Tech_Document/Distribution_Pnale.pdf'); return false;" class="doc-card">
 
 <i class="fa-solid fa-file-pdf doc-icon"></i>
 
@@ -1317,7 +1244,7 @@ These reports include schematic documentation, PCB design documentation, wiring 
 
 
 <!-- HARDWARE WORKFLOW -->
-<a onclick="openDoc('Tech_Document/Hardware_Workflow.pdf')" class="doc-card">
+<a href="#" onclick="openDoc('Tech_Document/Hardware_Workflow.pdf'); return false;" class="doc-card">
 
 <i class="fa-solid fa-file-pdf doc-icon"></i>
 
@@ -1328,7 +1255,7 @@ These reports include schematic documentation, PCB design documentation, wiring 
 
 
 <!-- LVDS DOCUMENT -->
-<a onclick="openDoc('Tech_Document/LVDS Display Interface Hardware Design Documentation (1).pdf')" class="doc-card">
+<a href="#" onclick="openDoc('Tech_Document/LVDS Display Interface Hardware Design Documentation (1).pdf'); return false;" class="doc-card">
 
 <i class="fa-solid fa-file-pdf doc-icon"></i>
 
@@ -1339,7 +1266,7 @@ These reports include schematic documentation, PCB design documentation, wiring 
 
 
 <!-- SYSTEM LEVEL DOCUMENT -->
-<a onclick="openDoc('Tech_Document/System_level_engineering.pdf')" class="doc-card">
+<a href="#" onclick="openDoc('Tech_Document/System_level_engineering.pdf'); return false;" class="doc-card">
 
 <i class="fa-solid fa-file-pdf doc-icon"></i>
 
@@ -1350,7 +1277,7 @@ These reports include schematic documentation, PCB design documentation, wiring 
 
 
 <!-- WIREVIZ DOCUMENT -->
-<a onclick="openDoc('Tech_Document/WireViz.Task.pdf')" class="doc-card">
+<a href="#" onclick="openDoc('Tech_Document/WireViz.Task.pdf'); return false;" class="doc-card">
 
 <i class="fa-solid fa-file-pdf doc-icon"></i>
 
@@ -1374,26 +1301,7 @@ These reports include schematic documentation, PCB design documentation, wiring 
 
 <div class="pdf-container">
 
-<iframe id="pdfFrame" width="100%" height="750px"></iframe>
-
-</div>
-
-</section>
-
-
-<!-- DOCUMENT VIEWER -->
-
-<section id="docViewer" class="page">
-
-<button class="btn back-btn" onclick="goBackFromDoc()">
-← Back
-</button>
-
-<h2 class="section-title">Document Viewer</h2>
-
-<div class="pdf-container">
-
-<iframe id="pdfFrame" src="" width="100%" height="700px"></iframe>
+<iframe id="pdfFrame" src="" title="Technical document viewer" loading="lazy" width="100%" height="700"></iframe>
 
 </div>
 
@@ -1610,17 +1518,17 @@ This project focuses on predicting the Remaining Useful Life (RUL) of lithium-io
 
 <div class="docs-grid">
 
-<a onclick="openDoc('Tech_Document/BTECH_Project_Black_Book.pdf')" class="doc-card">
+<a href="#" onclick="openDoc('Tech_Document/BTECH_Project_Black_Book.pdf'); return false;" class="doc-card">
 <i class="fa-solid fa-file-pdf doc-icon"></i>
 <h4>Final B.Tech Report</h4>
 </a>
 
-<a onclick="openDoc('Tech_Document/RUL_Data.log.Document.pdf')" class="doc-card">
+<a href="#" onclick="openDoc('Tech_Document/RUL_Data.log.Document.pdf'); return false;" class="doc-card">
 <i class="fa-solid fa-file-pdf doc-icon"></i>
 <h4>Data Logging Report</h4>
 </a>
 
-<a onclick="openDoc('Tech_Document/RUL_Draft.pdf')" class="doc-card">
+<a href="#" onclick="openDoc('Tech_Document/RUL_Draft.pdf'); return false;" class="doc-card">
 <i class="fa-solid fa-file-pdf doc-icon"></i>
 <h4>Research Draft</h4>
 </a>
@@ -1649,7 +1557,7 @@ approach for lithium-ion battery Remaining Useful Life prediction.
 
 <div class="docs-grid">
 
-<a onclick="openDoc('Tech_Document/RUL_Draft.pdf')" class="doc-card">
+<a href="#" onclick="openDoc('Tech_Document/RUL_Draft.pdf'); return false;" class="doc-card">
 
 <i class="fa-solid fa-file-pdf doc-icon"></i>
 
@@ -1664,6 +1572,12 @@ Draft research paper describing ML-based Remaining Useful Life prediction method
 </div>
 
 </section>
+
+<div id="imageModal" class="image-modal" aria-hidden="true">
+<span class="close" id="closeModal">&times;</span>
+<img class="modal-content" id="modalImg" alt="Expanded preview">
+<p id="modalCaption"></p>
+</div>
 
 <script src="script.js"></script>
 
